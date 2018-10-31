@@ -4,12 +4,15 @@ from db import session, Solution
 
 def n_queens(n):
     count = 0
-    cols = range(n)
-    for permutation in permutations(cols):
-        if n == len(set(permutation[i] + i for i in cols)) == len(set(permutation[i] - i for i in cols)):
+    columns = range(n)
+    for permutation in permutations(columns):
+        if n == len(set(permutation[i] + i for i in columns)) == len(set(permutation[i] - i for i in columns)):
             session.add(Solution(positions=permutation, number_of_queens=n))
             count += 1
-    session.commit()
+
+        if count:
+            session.commit()
+
     print(f'Number of solution for {n} queens is {count}')
     return count
 
