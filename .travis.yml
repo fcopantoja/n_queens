@@ -1,0 +1,16 @@
+sudo: required
+
+language: python
+
+services:
+  - docker
+
+python:
+  - "3.6"
+
+before_install:
+- docker compose build
+- docker-compose up -d
+
+script:
+  - docker-compose exec solution pytest tests.py
