@@ -6,11 +6,11 @@ services:
   - docker
 
 python:
-  - "3.6"
+  - "3.7-dev"
 
 before_install:
 - docker-compose build
 - docker-compose up -d
 
 script:
-  - docker-compose exec solution pytest tests.py
+  - docker-compose exec solution pytest -s tests.py
