@@ -1,1 +1,2 @@
-[![Build Status](https://api.travis-ci.com/fcopantoja/n_queens.png)](https://api.travis-ci.com/fcopantoja/n_queens)
+### Status
+[![Build Status](https://travis-ci.com/fcopantoja/n_queens.png)](https://travis-ci.org/fcopantoja/n_queens)
